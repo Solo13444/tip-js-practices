@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Эксперименты DOM и событий</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="./dom-events.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="container"><p class="eyebrow">Практическая работа № 3</p><h1>Эксперименты DOM и событий</h1></div></header>
+  <main class="container page-content">
+    <section class="list-panel">
+      <h2>Песочница DOM</h2>
+      <p>Откройте DevTools → Console. Поочерёдно нажмите кнопки и сравните вывод с прогнозом.</p>
+      <div id="experiment-root">
+        <h3 id="experiment-title">Заголовок эксперимента</h3>
+        <button type="button" id="add-item">Добавить запись</button>
+        <button type="button" id="change-title"><span>Изменить заголовок</span></button>
+        <ul id="experiment-list"><li data-id="1">Первая запись</li></ul>
+      </div>
+      <div id="event-log" aria-live="polite"></div>
+      <p><a href="../index.html">Вернуться к списку задач</a></p>
+    </section>
+  </main>
+</body>
+</html>

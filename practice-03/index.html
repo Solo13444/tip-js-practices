@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Практическая работа № 3 — список задач</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="eyebrow">Технологии индустриального программирования</p>
+        <h1>Список задач семинара</h1>
+      </div>
+      <a class="variant-link" href="?dataset=variant">Свой вариант · № 4</a>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <p class="eyebrow">Практическая работа № 3</p>
+        <h2 id="intro-title">Подготовка семинара</h2>
+        <p>Интерактивный список задач. Можно переключать статус, удалять записи и фильтровать список.</p>
+      </div>
+    </section>
+
+    <section class="summary-panel" id="task-summary" aria-label="Сводка по задачам">
+      <div class="stat"><span>Всего задач</span><strong data-stat="total">0</strong></div>
+      <div class="stat"><span>Выполнено</span><strong data-stat="completed">0</strong></div>
+      <div class="stat"><span>Осталось</span><strong data-stat="pending">0</strong></div>
+      <div class="stat"><span>Прогресс</span><strong data-stat="progress">0.0%</strong></div>
+      <div class="stat"><span>Показано</span><strong data-stat="visible">0</strong></div>
+    </section>
+
+    <section class="list-panel" aria-labelledby="list-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="list-title">Задачи</h2>
+          <p class="muted">Статус и сводка обновляются после каждого действия.</p>
+        </div>
+      </div>
+
+      <div id="filter-controls" class="filter-controls" aria-label="Фильтр задач">
+        <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true"><span>Все</span></button>
+        <button type="button" class="filter-button" data-filter="pending" aria-pressed="false"><span>В работе</span></button>
+        <button type="button" class="filter-button" data-filter="completed" aria-pressed="false"><span>Выполненные</span></button>
+      </div>
+
+      <p id="operation-message" class="operation-message" role="status" aria-live="polite"></p>
+      <p id="empty-state" class="empty-state" hidden></p>
+      <ul id="task-list" class="task-list" aria-label="Список задач"></ul>
+    </section>
+
+    <section class="help-panel">
+      <h2>Проверка поведения</h2>
+      <p>Нажмите «Свой вариант · № 4» вверху, чтобы открыть набор из шести задач. В нём изначально выполнены первые три. Переключатель статуса и удаление работают через сервисные функции ПР2, а не изменяют только HTML.</p>
+      <p><a href="./examples/dom-events.html">Открыть страницу экспериментов DOM и событий</a> · <a href="./checks.html">Открыть браузерные проверки</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container">Учебная работа · JavaScript, DOM и делегирование событий</div></footer>
+</body>
+</html>
